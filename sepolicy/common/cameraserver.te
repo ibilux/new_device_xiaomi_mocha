@@ -71,7 +71,7 @@ allow cameraserver self:process execmem;
 allow_use_phs(cameraserver);
 
 # Allow GL to access ptimer_scale_factor
-allow cameraserver sysfs_gpu:file r_file_perms;
+#allow cameraserver sysfs_gpu:file r_file_perms;
 
 # allow cameraserver to read files/dirs in /data/camera_config/
 r_dir_file(cameraserver, camera_config_file)

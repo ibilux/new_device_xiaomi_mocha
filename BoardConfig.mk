@@ -143,10 +143,16 @@ WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/bcmdhd/parameters/firmware_path
 #WIFI_DRIVER_MODULE_NAME          := "bcmdhd"
 
 # SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
 BOARD_SEPOLICY_DIRS += device/xiaomi/mocha/sepolicy/common \
                        device/xiaomi/mocha/sepolicy/lineage-common \
                        device/xiaomi/mocha/sepolicy/mocha
+                       
+# ThermalHAL
+TARGET_THERMALHAL_VARIANT := tegra
 
+# Use unified vendor
+TARGET_TEGRA_VARIANT := shield
 # Zygote whitelist extra paths
 ZYGOTE_WHITELIST_PATH_EXTRA := \"/dev/nvhost-ctrl\",
 
