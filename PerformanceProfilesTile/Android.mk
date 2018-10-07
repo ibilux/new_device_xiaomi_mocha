@@ -6,6 +6,7 @@ LOCAL_SRC_FILES := \
     $(call all-java-files-under, src)
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
+    android-support-v7-preference \
     org.lineageos.platform.internal
 
 LOCAL_RESOURCE_DIR := \
@@ -16,6 +17,7 @@ LOCAL_AAPT_FLAGS := \
 
 LOCAL_CERTIFICATE := platform
 LOCAL_MODULE_TAGS := optional
+LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_PRIVILEGED_MODULE := true
 
 LOCAL_PACKAGE_NAME := PerformanceTile
