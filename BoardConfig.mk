@@ -105,7 +105,7 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # LINEAGEHW
-BOARD_HARDWARE_CLASS := device/xiaomi/mocha/lineagehw
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|device/xiaomi/mocha/lineagehw|**/*.java
 
 # Offmode Charging
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
