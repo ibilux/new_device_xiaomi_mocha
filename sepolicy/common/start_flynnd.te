@@ -1,4 +1,4 @@
-# Copyright (c) 2014-2017, NVIDIA CORPORATION.  All rights reserved.
+# Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,9 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-allow zygote gpu_device:chr_file rw_file_perms;
-binder_use(zygote);
+type start_flynnd, domain;
+type start_flynnd_exec, exec_type, file_type, vendor_file_type;
 
-# allow zygote (for media_profile.xml) to read files/dirs in /data/camera_config/
-r_dir_file(zygote, camera_config_file)
+init_daemon_domain(start_flynnd)
 
+allow start_flynnd shell_exec:file rx_file_perms;
+allow start_flynnd toolbox_exec:file rx_file_perms;
+
+set_prop(start_flynnd, flynnd_prop)
+
+# start_flynnd needs access to some flynn specific nodes under /proc/device-tree/
+allow start_flynnd proc_flynn:file r_file_perms;
