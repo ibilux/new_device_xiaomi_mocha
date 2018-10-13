@@ -259,11 +259,8 @@
          in hardware. -->
     <bool name="config_setColorTransformAccelerated">true</bool>
     
-    <!-- The device supports freeform window management. Windows have title bars and can be moved
-         and resized. If you set this to true, you also need to add
-         PackageManager.FEATURE_FREEFORM_WINDOW_MANAGEMENT feature to your device specification.
-         The duplication is necessary, because this information is used before the features are
-         available to the system.-->
-    <bool name="config_freeformWindowManagement">true</bool>
+
+    <!-- Wether or not swipe up gesture's opt-in setting is available on this device -->
+    <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
 </resources>
