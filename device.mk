@@ -120,11 +120,11 @@ PRODUCT_PACKAGES += \
     enctune.conf
 
 # Bluetooth
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
+# PRODUCT_COPY_FILES += \
+# $(LOCAL_PATH)/bluetooth/bt_vendor.conf:system/etc/bluetooth/bt_vendor.conf
 
-PRODUCT_PACKAGES += \
-    libbt-vendor
+#PRODUCT_PACKAGES += \
+    #libbt-vendor
 
 # Camera
 PRODUCT_COPY_FILES += \
