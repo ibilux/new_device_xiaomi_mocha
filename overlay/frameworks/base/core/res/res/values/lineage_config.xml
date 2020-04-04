@@ -16,5 +16,5 @@
 -->
 <resources>
     <!-- Button backlight -->
-    <add-resource type="bool" name="config_deviceHasVariableButtonBrightness">true</add-resource>
+    <bool name="config_deviceHasVariableButtonBrightness">true</bool>
 </resources>
